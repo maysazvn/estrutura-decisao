@@ -1,0 +1,38 @@
+<script>
+    /*
+    PROBLEMA: INVESTIGAÇÃO CRIMINAL
+    Faça um script que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+    - "Telefonou para a vítima?"
+    - "Esteve no local do crime?"
+    - "Mora perto da vítima?"
+    - "Devia para a vítima?"
+    - "Já trabalhou com a vítima?"
+    O script deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve 
+    ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
+    */
+
+    //ENTRADA
+    const telefonou = prompt(`Você telefonou para a vítima do crime?`);
+    const local = prompt(`Você esteve no local do crime?`);
+    const moraPerto = prompt(`Você mora perto da vítima?`);
+    const devia = prompt(`Você devia para a vítima?`);
+    const trabalhou = prompt(`Já trabalhou para a vítima?`);
+
+
+    //PROCESSAMENTO
+    if (telefonou && local == "Sim" || telefonou && moraPerto == "Sim" || telefonou && devia == "Sim" || telefonou && trabalhou == "Sim" ||
+        local && moraPerto == "Sim" || local && devia == "Sim" || local && trabalhou == "Sim" || moraPerto && devia == "Sim" || moraPerto && trabalhou == "Sim" ||
+        devia && trabalhou == "Sim"){
+
+            alert(`Você é suspeito.`);
+
+        } else if (telefonou && local && moraPerto == "Sim"){
+
+            alert(`Você é cúmplice.
+            `);
+        }
+
+
+    //SAÍDA
+
+</script>
