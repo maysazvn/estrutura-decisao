@@ -11,7 +11,7 @@
     //ENTRADA
     const num1 = Number(prompt(`Informe o primeiro número.`));
     const num2 = Number(prompt(`Informe o segundo número.`));
-    const operacao = Number(prompt(`Informe a operação que será utilizada.`));
+    const operacao = prompt(`Informe a operação que será utilizada.`);
 
     //PROCESSAMENTO
     if (operacao == "soma") {
@@ -22,146 +22,107 @@
         if (soma % 2 === 0) {
             alert(`O número ${soma} é par.`);
 
-            if (soma % 2 !== 0) {
-                alert(`O número ${soma} é ímpar.`);
-
-            } else {
-                alert(`O número ${soma} é zero.`);
-
-            }
-        } else if (soma > 0) {
-            alert(`O número ${soma} é positivo.`);
-
-            if (soma < 0) {
-                alert(`O número ${soma} é negativo.`);
-
-            } else {
-                alert(`O número ${soma} é zero.`);
-
-            }
-
-        } else if (soma % 1 === 0) {
-            alert(`O número ${soma} é positivo.`);
-
-            if (soma < 0) {
-                alert(`O número ${soma} é negativo.`);
-
-            } else {
-                alert(`O número ${soma} é zero.`);
-
-            }
+        } else {
+            alert(`O número ${soma} é ímpar.`);
         }
 
-    } else if (operacao == "subtração"){
-        let = subtracao
+        if (soma > 0) {
+            alert(`O número ${soma} é positivo.`);
+
+        } else {
+            alert(`O número ${soma} é negativo.`);
+
+        }
+
+        if (soma % 1 === 0) {
+            alert(`O número ${soma} é inteiro.`);
+
+        } else {
+            alert(`O número ${soma} é decimal.`);
+
+        }
+    }
+
+    else if (operacao == "subtração") {
+        let subtracao
 
         subtracao = num1 - num2
 
         if (subtracao % 2 === 0) {
             alert(`O número ${subtracao} é par.`);
 
-            if (subtracao % 2 !== 0) {
-                alert(`O número ${subtracao} é ímpar.`);
-
-            } else {
-                alert(`O número ${subtracao} é zero.`);
-
-            }
-        } else if (subtracao > 0) {
-            alert(`O número ${subtracao} é positivo.`);
-
-            if (subtracao < 0) {
-                alert(`O número ${subtracao} é negativo.`);
-
-            } else {
-                alert(`O número ${subtracao} é zero.`);
-
-            }
-
-        } else if (subtracao % 1 === 0) {
-            alert(`O número ${subtracao} é positivo.`);
-
-            if (subtracao < 0) {
-                alert(`O número ${subtracao} é negativo.`);
-
-            } else {
-                alert(`O número ${subtracao} é zero.`);
-
-            }
+        } else {
+            alert(`O número ${subtracao} é ímpar.`);
         }
-    } else if (operacao == "multiplicação"){
-        let = mult
 
-        mult = num1 - num2
+        if (subtracao > 0) {
+            alert(`O número ${subtracao} é positivo.`);
+
+        } else {
+            alert(`O número ${subtracao} é negativo.`);
+
+        }
+
+        if (subtracao % 1 === 0) {
+            alert(`O número ${subtracao} é inteiro.`);
+
+        } else {
+            alert(`O número ${subtracao} é decimal.`);
+
+        }
+    } else if (operacao == "multiplicação") {
+        let mult
+
+        mult = num1 * num2
 
         if (mult % 2 === 0) {
             alert(`O número ${mult} é par.`);
 
-            if (mult % 2 !== 0) {
-                alert(`O número ${mult} é ímpar.`);
-
-            } else {
-                alert(`O número ${mult} é zero.`);
-
-            }
-        } else if (mult > 0) {
-            alert(`O número ${mult} é positivo.`);
-
-            if (mult < 0) {
-                alert(`O número ${mult} é negativo.`);
-
-            } else {
-                alert(`O número ${mult} é zero.`);
-
-            }
-
-        } else if (mult % 1 === 0) {
-            alert(`O número ${mult} é positivo.`);
-
-            if (mult < 0) {
-                alert(`O número ${mult} é negativo.`);
-
-            } else {
-                alert(`O número ${mult} é zero.`);
-
-            }
+        } else {
+            alert(`O número ${mult} é ímpar.`);
         }
-    } else if (operacao == "divisão"){
-        let = div
 
-        div = num1 - num2
+        if (mult > 0) {
+            alert(`O número ${mult} é positivo.`);
+
+        } else {
+            alert(`O número ${mult} é negativo.`);
+
+        }
+
+        if (mult % 1 === 0) {
+            alert(`O número ${mult} é inteiro.`);
+
+        } else {
+            alert(`O número ${mult} é decimal.`);
+
+        }
+    } else if (operacao == "divisão") {
+        let div
+
+        div = num1 / num2
 
         if (div % 2 === 0) {
             alert(`O número ${div} é par.`);
 
-            if (div % 2 !== 0) {
-                alert(`O número ${div} é ímpar.`);
+        } else {
+            alert(`O número ${div} é ímpar.`);
+        }
 
-            } else {
-                alert(`O número ${div} é zero.`);
-
-            }
-        } else if (div > 0) {
+        if (div > 0) {
             alert(`O número ${div} é positivo.`);
 
-            if (div < 0) {
-                alert(`O número ${div} é negativo.`);
+        } else {
+            alert(`O número ${div} é negativo.`);
 
-            } else {
-                alert(`O número ${div} é zero.`);
+        }
 
-            }
+        if (div % 1 === 0) {
+            alert(`O número ${div} é inteiro.`);
 
-        } else if (div % 1 === 0) {
-            alert(`O número ${div} é positivo.`);
+        } else {
+            alert(`O número ${div} é decimal.`);
 
-            if (div < 0) {
-                alert(`O número ${div} é negativo.`);
-
-            } else {
-                alert(`O número ${div} é zero.`);
-
-            }
         }
     }
 
