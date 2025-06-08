@@ -6,12 +6,97 @@
     */
 
     //ENTRADA
-    const hemisferio = prompt(`Informe o hemisfério que você está.`);
-    const mes = prompt(`Informe o qual o mês atual.`);
+    const hemisferio = prompt(`Informe o hemisfério que você está: digite S - Sul e N - Norte.`);
+    const mes = prompt(`Informe o qual o mês atual: digite "jan" - Janeiro, "fev" - Fevereiro, "mar" - Março, "abr" - Abril, "mai" - Maio, "jun" - Junho, "jul" - Julho, "ago" - Agosto, "set" - Setembro, "out" - Outubro, "nov" - Novembro e "dez" - Dezembro.`);
 
     //PROCESSAMENTO
+    if (hemisferio == "S") {
 
-    
+        if (mes == "jan" || mes == "fev") {
+
+            alert(`Você está no verão.`);
+
+        } else if (mes == "mar") {
+
+            alert(`Você está no fim do verão e início do outono.`);
+
+        } else if (mes == "abr" || mes == "mai") {
+
+            alert(`Você está no outono.`);
+
+        } else if (mes == "jun") {
+
+            alert(`Você está no fim do outono e início do inverno.`);
+
+        } else if (mes == "jul" || mes == "ago") {
+
+            alert(`Você está no inverno.`);
+
+        } else if (mes == "set") {
+
+            alert(`Você está no fim do inverno e início da primavera.`);
+
+        } else if (mes == "out" || mes == "nov") {
+
+            alert(`Você está na primavera.`);
+
+        } else if (mes == "dez") {
+
+            alert(`Você está no fim da primavera e início do verão.`);
+
+        } else {
+
+            alert(`Valor inválido`);
+
+        }
+
+    } else if (hemisferio == "N") {
+
+        if (mes == "jan" || mes == "fev") {
+
+            alert(`Você está no inverno.`);
+
+        } else if (mes == "mar") {
+
+            alert(`Você está no fim do inverno e início da primavera.`);
+
+        } else if (mes == "abr" || mes == "mai") {
+
+            alert(`Você está na primavera.`);
+
+        } else if (mes == "jun") {
+
+            alert(`Você está no fim da primavera e início do verão.`);
+
+        } else if (mes == "jul" || mes == "ago") {
+
+            alert(`Você está no verão.`);
+
+        } else if (mes == "set") {
+
+            alert(`Você está no fim do verão e início do outono.`);
+
+        } else if (mes == "out" || mes == "nov") {
+
+            alert(`Você está no outono.`);
+
+        } else if (mes == "dez") {
+
+            alert(`Você está no fim do outono e início do inverno.`);
+
+        } else {
+
+            alert(`Valor inválido`);
+
+        }
+
+    } else {
+
+        alert(`Valor inválido`);
+
+    }
+
+
     //SAÍDA
 
 </script>

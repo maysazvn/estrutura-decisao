@@ -12,15 +12,29 @@
     */
 
     //ENTRADA
-    const telefonou = prompt(`Você telefonou para a vítima do crime?`);
-    const local = prompt(`Você esteve no local do crime?`);
-    const moraPerto = prompt(`Você mora perto da vítima?`);
-    const devia = prompt(`Você devia para a vítima?`);
-    const trabalhou = prompt(`Já trabalhou para a vítima?`);
-
+    const telefonou = Number(prompt(`Você telefonou para a vítima do crime? (1 - Sim, 0 - Não)`));
+    const local = Number(prompt(`Você esteve no local do crime? (1 - Sim, 0 - Não)`));
+    const moraPerto = Number(prompt(`Você mora perto da vítima? (1 - Sim, 0 - Não)`));
+    const devia = Number(prompt(`Você devia para a vítima? (1 - Sim, 0 - Não)`));
+    const trabalhou = Number(prompt(`Você já trabalhou com a vítima? (1 - Sim, 0 - Não)`));
 
     //PROCESSAMENTO
-    
+
+    const pontos = telefonou + local + moraPerto + devia + trabalhou;
+
+    if (pontos == 2) {
+        alert(`Suspeito(a)!`);
+    }
+    else if (pontos == 3 || pontos == 4) {
+        alert(`Cúmplice!`);
+    }
+    else if (pontos == 5) {
+        alert(`Assassino(a)!`);
+    }
+    else {
+        alert(`Inocente!`);
+    }
+
     //SAÍDA
 
 </script>
