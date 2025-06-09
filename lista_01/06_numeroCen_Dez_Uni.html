@@ -18,26 +18,77 @@
     let unidade;
 
     //PROCESSAMENTO
-    if (numero >= 0 && numero < 10) {
-        unidade = numero;
+    if (numero >= 0 && numero < 1000) {
+        let restoDivisao;
 
-        alert(`${numero} unidades`);
-
-    } else if (numero > 9 && numero < 100) {
-        dezena = Math.trunc(numero / 10);
-        unidade = numero % 10;
-
-        alert(`${dezena} dezenas e ${unidade} unidades.`);
-
-    } else if (numero > 99 && numero < 1000) {
         centena = Math.trunc(numero / 100);
         restoDivisao = numero % 100;
-        dezena = Math.trunc((restoDivisao)/ 10);
+        dezena = Math.trunc((restoDivisao) / 10);
         unidade = restoDivisao % 10;
 
-        alert(`${centena} centenas, ${dezena} dezenas e ${unidade} unidades.`);
+        let numeracao = 0;
 
-    } else{
+        if (centena > 0) numeracao++;
+        if (dezena > 0) numeracao++;
+        if (unidade > 0) numeracao++;
+
+        let mensagemFinal = `Esse número tem `;
+
+        if(centena > 1){
+
+            numeracao--;
+            mensagemFinal = mensagemFinal + `${centena} centenas`;
+
+            if (numeracao >= 2) mensagemFinal = mensagemFinal + `, `;
+
+            else if (numeracao == 1) mensagemFinal = mensagemFinal + ` e `;
+
+        } else if(centena == 1){
+
+            numeracao--;
+            mensagemFinal = mensagemFinal + `${centena} centena`;
+
+            if (numeracao >= 2) mensagemFinal = mensagemFinal + `, `;
+
+            else if (numeracao == 1) mensagemFinal = mensagemFinal + ` e `;
+
+        }
+
+        if(dezena > 1){
+
+            numeracao--;
+            mensagemFinal = mensagemFinal + `${dezena} dezenas`;
+
+            if (numeracao >= 2) mensagemFinal = mensagemFinal + `, `;
+
+            else if (numeracao == 1) mensagemFinal = mensagemFinal + ` e `;
+
+        } else if(dezena == 1){
+
+            numeracao--;
+            mensagemFinal = mensagemFinal + `${dezena} dezena`;
+
+            if (numeracao >= 2) mensagemFinal = mensagemFinal + `, `;
+
+            else if (numeracao == 1) mensagemFinal = mensagemFinal + ` e `;
+
+        }
+
+        if(unidade > 1){
+
+            numeracao--;
+            mensagemFinal = mensagemFinal + `${unidade} unidades`;
+
+        } else if(unidade == 1){
+
+            numeracao--;
+            mensagemFinal = mensagemFinal + `${unidade} unidade`;
+
+        }
+
+        alert(mensagemFinal)
+
+    } else {
         alert(`Esse número não é válido.`);
     }
 
