@@ -11,10 +11,10 @@
     //ENTRADA
     const num1 = Number(prompt(`Informe o primeiro número.`));
     const num2 = Number(prompt(`Informe o segundo número.`));
-    const operacao = prompt(`Informe a operação que será utilizada.`);
+    const operacao = prompt(`Informe a operação que será utilizada: digite So - Soma, Su - Subtração, M - Multiplicação e D -  Divisão`);
 
     //PROCESSAMENTO
-    if (operacao == "soma") {
+    if (operacao == "So") {
         let soma;
 
         soma = num1 + num2;
@@ -43,7 +43,7 @@
         }
     }
 
-    else if (operacao == "subtração") {
+    else if (operacao == "Su") {
         let subtracao
 
         subtracao = num1 - num2
@@ -70,7 +70,7 @@
             alert(`O número ${subtracao} é decimal.`);
 
         }
-    } else if (operacao == "multiplicação") {
+    } else if (operacao == "M") {
         let mult
 
         mult = num1 * num2
@@ -97,7 +97,7 @@
             alert(`O número ${mult} é decimal.`);
 
         }
-    } else if (operacao == "divisão") {
+    } else if (operacao == "D") {
         let div
 
         div = num1 / num2
